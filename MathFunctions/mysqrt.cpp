@@ -7,6 +7,6 @@
 float mysqrt(const float &number)
 {
     float result{};
-    result = sqrt(number);
+    result = sqrt(number)+1;
     return result;
 }
