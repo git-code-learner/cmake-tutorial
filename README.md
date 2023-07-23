@@ -4,6 +4,7 @@ This is just a repo with files from tutorial that is maintained on official webs
 # Tweaks on this repo in original tutorial.
 - Main file: in tutorial it is `tutorial.cpp`, here it is `main.cpp`
 - Wherever possible a variable ${PROJECT_NAME} is used.
+- Some minor tweaks here and there.
 
 # Important things to notice.
 Delete `build/` folder always! There are some options implemented in the file, and they fail to update. So it may happen that you change an option in `CmakeLists.txt` file and see no result. I have been fighting with it for a while, to finally reach the solution: refresh the state of affairs by simply removing entire `build/` folder. No it works like charm.

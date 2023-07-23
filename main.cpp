@@ -1,5 +1,6 @@
 #include <iostream>
 #include "TutorialConfig.h"
+#include <stdlib.h>
 
 //Optional library MathFunctions.
 #ifdef USE_MYMATH
@@ -16,14 +17,6 @@ int main(int argc, char const *argv[])
 {
     //Header info to the user.
     std::cout << "Project Tutorial. Hello!" << std::endl;
-    
-    //Sqare root calculation.
-    #ifdef USE_MYMATH
-    const float outputValue = mysqrt(36);
-    #else
-    const float outputValue = sqrt(36);
-    #endif
-    std::cout << "The square root of 36 is: " << outputValue << std::endl;
 
     //Usage analysis.
     if (argc < 2)
@@ -38,6 +31,18 @@ int main(int argc, char const *argv[])
     }
     else
     {
+        //Sqare root calculation.
+        float inputValue{};
+        inputValue = strtof(argv[1],NULL); //Type casting.
+        
+        #ifdef USE_MYMATH
+        const float outputValue = mysqrt(inputValue);
+        #else
+        const float outputValue = sqrt(inputValue);
+        #endif
+        
+        std::cout << "The square root of 36 is: " << outputValue << std::endl;
+    
         //Finish. OK.
         return 0;
     } 
