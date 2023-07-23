@@ -1,7 +1,7 @@
 #Setup.
 cmake_minimum_required(VERSION 3.27)
 cmake_policy(SET CMP0048 NEW)
-project(Tutorial VERSION 2.2V)
+project(Tutorial VERSION 2.2)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
