@@ -1,0 +1,5 @@
+//The configured options and settings for the tutorial.
+//When cmake configures this header file the values 
+//for @Tutorial_VERSION... will be replaced.
+#define ${PROJECT_NAME} VERSION_MAJOR @Tutorial_VERSION_MAJOR@
+#define ${PROJECT_NAME} VERSION_MINOR @Tutorial_VERSION_MINOR@
