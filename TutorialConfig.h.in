@@ -3,3 +3,6 @@
 //for @Tutorial_VERSION... will be replaced.
 #define Tutorial_VERSION_MAJOR @Tutorial_VERSION_MAJOR@
 #define Tutorial_VERSION_MINOR @Tutorial_VERSION_MINOR@
+
+//Library MathFunctions.
+#cmakedefine USE_MYMATH
