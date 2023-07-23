@@ -1,7 +1,7 @@
 #Setup.
 cmake_minimum_required(VERSION 3.27)
 cmake_policy(SET CMP0048 NEW)
-project(Tutorial VERSION 2.2)
+project(Tutorial VERSION 2.2V)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
@@ -32,4 +32,4 @@ target_link_libraries(${PROJECT_NAME} PUBLIC ${EXTRA_LIBS})
 #Add the directory to the list of paths (end of file!).
 target_include_directories(${PROJECT_NAME} PUBLIC 
 ${PROJECT_BINARY_DIR}
-) 
+)
