@@ -29,3 +29,6 @@ to run (step 3)
 ./build/Tutorial
 ```
 as the target executable name is `Tutorial` (set up in `CmakeLists.txt`).
+
+# Why so many empty commits?
+Well, as it is a training experience - you know how it goes: sometimes you screw up a little, and are "in search" of a solution. Sometimes it gets "creative", sometimes bit messy. Life... :-)
