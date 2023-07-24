@@ -1,7 +1,7 @@
 #Setup.
 cmake_minimum_required(VERSION 3.27)
 cmake_policy(SET CMP0048 NEW)
-project(Tutorial VERSION 2.4.1)
+project(Tutorial VERSION 2.4.2)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
@@ -36,3 +36,32 @@ target_link_libraries(${PROJECT_NAME} PUBLIC ${EXTRA_LIBS})
 install(TARGETS ${PROJECT_NAME} DESTINATION bin)
 install(FILES ${PROJECT_BINARY_DIR}/TutorialConfig.h
     DESTINATION include)
+
+#Testing.
+enable_testing()
+
+#Does the application run?
+add_test(NAME Runs COMMAND ${PROJECT_NAME} 25)
+
+#Does the application work?
+add_test(NAME Usage COMMAND ${PROJECT_NAME})
+set_tests_properties(Usage
+  PROPERTIES PASS_REGULAR_EXPRESSION "Usage:.*number"
+  )
+
+#Define a function to simplify adding tests.
+function(do_test target arg result)
+    add_test(NAME Comp${arg} COMMAND ${target} ${arg})
+    set_tests_properties(Comp${arg}
+    PROPERTIES PASS_REGULAR_EXPRESSION ${result}
+    )
+endfunction(do_test)
+
+#Do a bunch of testing.
+do_test(${PROJECT_NAME} 4 " is 2")
+do_test(${PROJECT_NAME} 9 " is 3")
+do_test(${PROJECT_NAME} 16 " is 4")
+do_test(${PROJECT_NAME} 81 " is 9")
+do_test(${PROJECT_NAME} 49 " is 7")
+do_test(${PROJECT_NAME} 25 " is 5")
+do_test(${PROJECT_NAME} 0.0001 " is 0.01")
