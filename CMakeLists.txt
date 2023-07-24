@@ -33,6 +33,6 @@ ${PROJECT_BINARY_DIR}
 target_link_libraries(${PROJECT_NAME} PUBLIC ${EXTRA_LIBS})
 
 #Installation.
-install(TARGETS Tutorial DESTINATION bin)
+install(TARGETS ${PROJECT_NAME} DESTINATION bin)
 install(FILES ${PROJECT_BINARY_DIR}/TutorialConfig.h
     DESTINATION include)
