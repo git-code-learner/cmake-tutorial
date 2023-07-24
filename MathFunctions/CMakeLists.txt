@@ -6,4 +6,4 @@ target_include_directories(MathFunctions
 
 #Installation.
 install(TARGETS MathFunctions DESTINATION lib)
-install(FILES MathFunctions DESTINATION include)
+install(FILES MathFunctions.h DESTINATION include)
