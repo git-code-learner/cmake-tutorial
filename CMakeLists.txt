@@ -1,7 +1,7 @@
 #Setup.
 cmake_minimum_required(VERSION 3.27)
 cmake_policy(SET CMP0048 NEW)
-project(Tutorial VERSION 2.3.1)
+project(Tutorial VERSION 2.4.1)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
@@ -32,5 +32,7 @@ ${PROJECT_BINARY_DIR}
 )
 target_link_libraries(${PROJECT_NAME} PUBLIC ${EXTRA_LIBS})
 
-#Install?
-install(TARGETS ${PROJECT_NAME})
+#Installation.
+install(TARGETS Tutorial DESTINATION bin)
+install(FILES ${PROJECT_BINARY_DIR}/TutorialConfig.h
+    DESTINATION include)
