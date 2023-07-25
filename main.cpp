@@ -2,7 +2,7 @@
 #include "TutorialConfig.h"
 #include <stdlib.h>
 
-Optional library MathFunctions.
+//Optional library MathFunctions.
 #ifdef USE_MYMATH
 #   include "MathFunctions.h"
 #else
