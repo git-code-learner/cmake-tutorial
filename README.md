@@ -1,5 +1,5 @@
 # What is this.
-This is just a repo with files from tutorial that is maintained on official website of cmake ([link](https://cmake.org/cmake/help/book/mastering-cmake/cmake/Help/guide/tutorial/index.html)) - with minor tweaks.
+This is just a repo with files from tutorial that is maintained on official website of cmake ([link](https:cmake.org/cmake/help/book/mastering-cmake/cmake/Help/guide/tutorial/index.html)) - with minor tweaks.
 
 # Tweaks on this repo in original tutorial.
 - Main file: in tutorial it is `tutorial.cpp`, here it is `main.cpp`
@@ -32,3 +32,12 @@ as the target executable name is `Tutorial` (set up in `CmakeLists.txt`).
 
 # Why so many empty commits?
 Well, as it is a training experience - you know how it goes: sometimes you screw up a little, and are "in search" of a solution. Sometimes it gets "creative", sometimes bit messy. Life... :-)
+
+# Why is Step 6 ommited.
+
+Explanation is in `main.cpp` and is copied below:
+
+Step 6. Adding a custom Command and Generated File.
+Important note:
+this step is unclear. It tells sth about "valid C code in precomputed table", but nowhere is the information how the file should look like. Plus, there is some algorithm given for calculations, that also is unclear.
+Therefore the entire step was ommited, as kinda stupid - the tutorial is to master cmake not, some unclear mathematical visions.
