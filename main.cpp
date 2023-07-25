@@ -25,25 +25,25 @@
 */
 int main(int argc, char const *argv[])
 {
-    Header info to the user.
+    //Header info to the user.
     std::cout << "Project Tutorial. Hello!" << std::endl;
 
-    Usage analysis.
+    //Usage analysis.
     if (argc < 2)
     {
-        Report version.
+        //Report version.
         std::cout << argv[0] << " version " << Tutorial_VERSION_MAJOR <<
             "." << Tutorial_VERSION_MINOR << std::endl;
         
-        Help the user.
+        //Help the user.
         std::cout << "Usage: " << argv[0] << " number" << std::endl;
         return 1;
     }
     else
     {
-        Sqare root calculation.
+        //Sqare root calculation.
         float inputValue{};
-        inputValue = strtof(argv[1],NULL); Type casting.
+        inputValue = strtof(argv[1],NULL); //Type casting.
         
         #ifdef USE_MYMATH
         const float outputValue = mysqrt(inputValue);
@@ -53,7 +53,7 @@ int main(int argc, char const *argv[])
         
         std::cout << "The square root of " << inputValue << " is: " << outputValue << std::endl;
     
-        Finish. OK.
+        //Finish. OK.
         return 0;
     } 
 }

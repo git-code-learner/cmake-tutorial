@@ -16,7 +16,7 @@ else()
 endif()
 
 #Turn on the MY_MATH library?
-option(USE_MYMATH "Use tutorial provided math implementation" ON) #Optional.
+option(USE_MYMATH "Use tutorial provided math implementation" OFF) #Optional.
 if(${USE_MYMATH})
     message(STATUS "Math library: using custom built module.")
     add_subdirectory(MathFunctions)
@@ -66,3 +66,10 @@ do_test(${PROJECT_NAME} 9 "9 is: 3")
 do_test(${PROJECT_NAME} 25 "25 is: 5")
 do_test(${PROJECT_NAME} 49 "49 is: 7")
 do_test(${PROJECT_NAME} 0.0001 "0.0001 is: 0.01")
+
+#Step 7. Building an Installer.
+include(InstallRequiredSystemLibraries)
+set(CPACK_RESOURCE_FILE_LICENSE ${CMAKE_CURRENT_SOURCE_DIR}/License.txt)
+set(CPACK_PACKAGE_VERSION_MAJOR ${Tutorial_VERSION_MAJOR})
+set(CPACK_PACKAGE_VERSION_MINOR ${Tutorial_VERSION_MINOR})
+include(CPack)
