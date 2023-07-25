@@ -41,3 +41,32 @@ Step 6. Adding a custom Command and Generated File.
 Important note:
 this step is unclear. It tells sth about "valid C code in precomputed table", but nowhere is the information how the file should look like. Plus, there is some algorithm given for calculations, that also is unclear.
 Therefore the entire step was ommited, as kinda stupid - the tutorial is to master cmake not, some unclear mathematical visions.
+
+# Step 7. Building an Installer.
+
+And that's where the cool part starts! Just a few more commands in `CmakeLists.txt`:
+```
+#Step 7. Building an Installer.
+include(InstallRequiredSystemLibraries)
+set(CPACK_DEBIAN_PACKAGE_SHLIBDEPS ON)
+set(CPACK_DEBIAN_PACKAGE_MAINTAINER "The-Naive-User")
+set(CPACK_RESOURCE_FILE_LICENSE ${CMAKE_CURRENT_SOURCE_DIR}/License.txt)
+set(CPACK_PACKAGE_VERSION_MAJOR ${Tutorial_VERSION_MAJOR})
+set(CPACK_PACKAGE_VERSION_MINOR ${Tutorial_VERSION_MINOR})
+set(CPACK_PACKAGE_VERSION_PATCH ${Tutorial_VERSION_PATCH})
+include(CPack)
+```
+-- and boom! You have a possibility to create automatic `.deb` packages installer (or many other formats if you will).
+
+Enough is to type (from within `build/` directory):
+```
+cpack -G DEB
+```
+
+The result is a beautiful file consising of project name and its version numer. All you have to do to install it on any Debian machine is standard:
+```
+sudo dpkg -i package_name
+```
+-- from the folder where this `package_name` is. That's it!
+
+*How cool is that?!* :-)
