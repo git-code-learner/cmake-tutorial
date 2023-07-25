@@ -11,6 +11,12 @@
 float mysqrt(const float &number)
 {
     float result{};
-    result = sqrt(number)+1;
+    
+    #if defined(HAVE_LOG) && defined(HAVE_EXP)
+        result = exp(log(number) * 0.5);
+    #else
+        result = sqrt(number)+1;
+    #endif
+
     return result;
 }
