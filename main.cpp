@@ -41,7 +41,7 @@ int main(int argc, char const *argv[])
         const float outputValue = sqrt(inputValue);
         #endif
         
-        std::cout << "The square root of 36 is: " << outputValue << std::endl;
+        std::cout << "The square root of " << inputValue << " is: " << outputValue << std::endl;
     
         //Finish. OK.
         return 0;
