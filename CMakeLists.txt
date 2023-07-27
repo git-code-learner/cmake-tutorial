@@ -6,7 +6,7 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 #Choose the compiler.
-option(USE_CLANG "Shall clang be used?" OFF)
+option(USE_CLANG "Shall clang be used?" ON)
 if(${USE_CLANG})
     message(STATUS "Compiler: chosen to build with clang.")
     SET (CMAKE_CXX_COMPILER "/usr/bin/clang++" CACHE STRING "C++ compiler" FORCE)
@@ -16,7 +16,7 @@ else()
 endif()
 
 #Turn on the MY_MATH library?
-option(USE_MYMATH "Use tutorial provided math implementation" OFF) #Optional.
+option(USE_MYMATH "Use tutorial provided math implementation" ON) #Optional.
 if(${USE_MYMATH})
     message(STATUS "Math library: using custom built module.")
     add_subdirectory(MathFunctions)

@@ -1,6 +1,14 @@
 # What is this.
 This is just a repo with files from tutorial that is maintained on official website of cmake ([link](https:cmake.org/cmake/help/book/mastering-cmake/cmake/Help/guide/tutorial/index.html)) - with minor tweaks.
 
+# How this can help me?
+
+Firstly it helped me, so maybe it will be of some help to you - I wish you this :-).
+
+But seriously, this is a repo that follows loosely the steps of cmake tutorial, where each commit in the repo is a small step in the tutorial. If you want to play with it, do some testing but save some time on typing, just do `checkouts` on the `repo`, and you will be able to follow the entire tutorial quickly.
+
+Some parts are ommited, and those are theese were I decided that they are not important to learn basics of cmake (Step 6). The tutorial has got 12 steps, this repo covers up to seventh (but ommiting stupid in my opinion 6).
+
 # Tweaks on this repo in original tutorial.
 - Main file: in tutorial it is `tutorial.cpp`, here it is `main.cpp`
 - Wherever possible a variable ${PROJECT_NAME} is used.
@@ -70,3 +78,15 @@ sudo dpkg -i package_name
 -- from the folder where this `package_name` is. That's it!
 
 *How cool is that?!* :-)
+
+# Installer `.deb` package
+
+Although `cmake` with this `repo` can easily create many packages, the debian package has been built (as I am using debian-based distro) and is available for download.
+
+If you want to download and install it just download the file (folder `Download`) and install the package with command
+
+```
+sudo dpkg -i Tutorial-2.6.1-Linux.deb
+```
+
+-- and this will do the job. It will automatically install the "software" on your system. Beware, that "software" is very stupid and not usefull at all, so maybe do it on virtual machine?
