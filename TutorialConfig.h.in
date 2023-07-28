@@ -1,9 +1,11 @@
 //The configured options and settings for the tutorial.
 //When cmake configures this header file the values 
 //for @Tutorial_VERSION... will be replaced.
-#define Tutorial_VERSION_MAJOR @Tutorial_VERSION_MAJOR@
-#define Tutorial_VERSION_MINOR @Tutorial_VERSION_MINOR@
-#define Tutorial_VERSION_PATCH @Tutorial_VERSION_PATCH@
+#define PROJECT_NAME "${PROJECT_NAME}"
+#define PROJECT_VERSION "@PROJECT_VERSION@"
+#define PROJECT_VERSION_MAJOR @PROJECT_VERSION_MAJOR@
+#define PROJECT_VERSION_MINOR @PROJECT_VERSION_MINOR@
+#define PROJECT_VERSION_PATCH @PROJECT_VERSION_PATCH@
 
 //Library MathFunctions.
 #cmakedefine USE_MYMATH

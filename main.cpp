@@ -25,15 +25,14 @@
 */
 int main(int argc, char const *argv[])
 {
-    //Header info to the user.
-    std::cout << "Project Tutorial. Hello!" << std::endl;
+    //Report info about project and its version.
+    std::cout << PROJECT_NAME << " (" 
+        << PROJECT_VERSION << ")";
+    std::cout << ", hello!" << std::endl;
 
     //Usage analysis.
     if (argc < 2)
     {
-        //Report version.
-        std::cout << argv[0] << " version " << Tutorial_VERSION_MAJOR <<
-            "." << Tutorial_VERSION_MINOR << std::endl;
         
         //Help the user.
         std::cout << "Usage: " << argv[0] << " number" << std::endl;
