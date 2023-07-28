@@ -2,3 +2,4 @@ build/
 cmake-3.27.0-rc3-tutorial-source/
 Testing/
 Download/_CPack_Packages/
+.vscode/
